@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register | Library Management System</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            width:350px;
+            border-radius:10px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007bff;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>User Register</h2>
+
+<input id="name" placeholder="Name">
+
+<input id="email" placeholder="Email">
+
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p id="msg"></p>
+
+</div>
+
+
+<script>
+
+async function register(){
+
+    const user={
+        name:document.getElementById("name").value,
+        email:document.getElementById("email").value,
+        password:document.getElementById("password").value
+    };
+
+
+    const response = await fetch("http://localhost:5000/users/register",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify(user)
+
+    });
+
+
+    const data = await response.json();
+    console.log(data);
+
+    document.getElementById("msg").innerHTML=data.message;
+
+}
+
+</script>
+
+
+</body>
+</html>

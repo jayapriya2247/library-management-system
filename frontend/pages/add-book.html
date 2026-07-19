@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Book</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/books.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="bi bi-book-half"></i>
+
+            <span>Library</span>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="books.html">
+                    <i class="bi bi-book"></i>
+                    Books
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    <i class="bi bi-people"></i>
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="issue-book.html">
+                    <i class="bi bi-journal-arrow-up"></i>
+                    Issue Book
+                </a>
+            </li>
+
+            <li>
+                <a href="return-book.html">
+                    <i class="bi bi-journal-arrow-down"></i>
+                    Return Book
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <h2>Add New Book</h2>
+
+            <a href="books.html" class="btn btn-secondary">
+
+                Back
+
+            </a>
+
+        </div>
+
+        <div class="table-container mt-4">
+
+            <form id="bookForm">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Book Title
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Author
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="author"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            ISBN
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="isbn">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Category
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="category">
+
+                            <option>Programming</option>
+                            <option>Database</option>
+                            <option>Networking</option>
+                            <option>AI & ML</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Publisher
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="publisher">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Published Year
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="year">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Price
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="price">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Quantity
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="quantity">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Rack Number
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="rack">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Book Cover
+
+                        </label>
+
+                        <input
+                            type="file"
+                            class="form-control"
+                            id="image">
+
+                    </div>
+
+                    <div class="col-12 mb-3">
+
+                        <label class="form-label">
+
+                            Description
+
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            rows="4"
+                            id="description"></textarea>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-success">
+
+                    Save Book
+
+                </button>
+
+                <button
+                    type="reset"
+                    class="btn btn-danger">
+
+                    Reset
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/add-book.js"></script>
+
+</body>
+
+</html>
