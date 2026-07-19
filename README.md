@@ -34,5 +34,15 @@ library-management-system
 |-- frontend
 
 ## How to Run
+## 📸 Project Screenshots
+
+### Login Page
+![Login Page](frontend/screenshots/login.png)
+
+### Dashboard
+![Dashboard](frontend/screenshots/dashboard.png)
+
+### Books Management
+![Books Management](frontend/screenshots/books.png)
 
 ### Backend
